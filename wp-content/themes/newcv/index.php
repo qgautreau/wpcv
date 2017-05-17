@@ -1,16 +1,13 @@
-<?php /* Template Name: CV */ ?>
-
 <?php
-    
     get_header();
-    $my_cat = get_categories();
 
+    $my_cat = get_categories();
    foreach ($my_cat as $cat) {
        global $post;
        $args = array( "posts_per_page" => -1, "category" => $cat->cat_ID );
        $myposts = get_posts( $args );
        if ( $myposts) {
-           echo "<div>";
+           printf('<div id="%s" class="cvpart">', $cat->cat_ID);
            echo "<h2>" .$cat->name. "</h2>";
            foreach ($myposts as $post) {
                setup_postdata( $post );
@@ -25,12 +22,12 @@
                    echo "<div>".edit_post_link()."</div>";
                }
            }
-           echo "</div>";
+           printf('</div>');
            /* Restore original Post Data */
            wp_reset_postdata();
-       } else {
+        } else {
            // no posts found
        }
    }
-?>
- <?php
+
+ ?>

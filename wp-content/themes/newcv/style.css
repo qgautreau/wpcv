@@ -1,0 +1,47 @@
+/*!
+Theme Name: newcv
+Theme URI:
+Author:
+Author URI:
+Description: Description
+Version:
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: newcv
+Tags:
+*/
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+#categories {
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    border: 1px solid green;
+    padding: 0.5em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: black;
+}
+
+.cvpart {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid red;
+    padding: 0.5em;
+    margin: 1em;
+}
