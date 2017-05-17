@@ -38,7 +38,11 @@
                 <?php
                     $my_cat = get_categories();
                    foreach ($my_cat as $cat) {
-                       printf('<li><a href="#%s">%s</a></li>', $cat->cat_ID, $cat->name);
+                       printf('<li><a href="#%s">%s</a>', $cat->cat_ID, $cat->name);
+                       printf('<ul id="subcategory">');
+                       printf('<li><a href="#%s">%s</a></li>',$cat->cat_ID, $cat->name);
+                       printf('</ul>');
+                       printf('</li>');
                    }
                 ?>
             </ul>
